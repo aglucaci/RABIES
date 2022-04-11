@@ -1,0 +1,45 @@
+ViPR search -- see 'ViPR Search.png' for a description. Search on Rhabdoviridae
+Download CDS file (as well as ...)
+Unzip CDS file
+Process CDS fasta into single gene fasta files via 'Process_CDS_to_Genes.ipynb'
+This outputs unaligned pastas.
+Take it to mega-x and align it with muscle (default params).
+Clean up the alignments, done manually and via hyphy
+
+
+--- Skip
+(echo 1; echo /Users/sweaver/Programming/hyphy/HIV_RT.nex; echo 1) | ./hyphy res/TemplateBatchFiles/CleanStopCodons.bf 
+
+(echo 1; echo /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/clean_MEGAX_aln_Rables_Lyssavirus_G.fas; echo 1) | ./hyphy res/TemplateBatchFiles/CleanStopCodons.bf 
+
+/usr/local/bin/hyphy
+/usr/local/share/hyphy/TemplateBatchFiles/CleanStopCodons.bf
+
+(echo 1; echo /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/clean_MEGAX_aln_Rables_Lyssavirus_G.fas; echo 1) | /usr/local/bin/hyphy /usr/local/share/hyphy/TemplateBatchFiles/CleanStopCodons.bf
+
+https://github.com/veg/hyphy/issues/1246
+hyphy cln Universal /Users/sweaver/Programming/hyphy/HIV_RT.nex "No/No" /Users/sweaver/Programming/hyphy/HIV_RT_cleaned.nex
+--- End skip ----
+
+# Use this script ---------
+hyphy cln Universal /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/clean_MEGAX_aln_Rables_Lyssavirus_G.fas "No/No" /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/hyphy_clean_MEGAX_aln_Rables_Lyssavirus_G.fas
+
+hyphy cln Universal /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/MEGAX_aln_Rabies_Lyssavirus_L.fas "No/No" /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/hyphy_clean_MEGAX_aln_Rabies_Lyssavirus_L.fas
+
+hyphy cln Universal /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/MEGAX_aln_Rabies_Lyssavirus_M.fas "No/No" /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/hyphy_clean_MEGAX_aln_Rabies_Lyssavirus_M.fas
+
+hyphy cln Universal /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/MEGAX_aln_Rabies_Lyssavirus_N.fas "No/No" /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/hyphy_clean_MEGAX_aln_Rabies_Lyssavirus_N.fas
+
+hyphy cln Universal /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/MEGAX_aln_Rabies_Lyssavirus_P.fas "No/No" /Users/user/Desktop/Rabies_CDS/MEGAX_Alignments/clean/hyphy_clean_MEGAX_aln_Rabies_Lyssavirus_P.fas
+
+Datamonkey -- FEL -- All branches
+
+G -- https://www.datamonkey.org/fel/606f87d39371c63eb63dcafa
+
+L -- https://www.datamonkey.org/fel/606f89209371c63eb63dccba
+
+M -- https://www.datamonkey.org/fel/606f88a39371c63eb63dcb9c
+
+N -- https://www.datamonkey.org/fel/606f88b89371c63eb63dcbbb
+
+P -- https://www.datamonkey.org/fel/606f88789371c63eb63dcb79
